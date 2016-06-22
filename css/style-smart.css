@@ -32,12 +32,12 @@
             height: auto;
         }
 
-  #nav:hover ul {
+#nav:hover ul {
 	transition: 0s linear .05s;
 }
 
 .nav1
-{bottom: 30%;
+{bottom: 10%;
 }
 
 .titre , .titre h2
@@ -113,8 +113,16 @@ li#menu-portfolio
     background-image: url(../images/menu-onglet-on.png);
 }
 
+nav.fixed {
+ height: 80px;
+ transition: all 0.3s ease 0.1s;
+ font-size: 0.9em
+ }
+
 .nav1.fixed
-{bottom: 15px;
+{top:  47px;
+  left: 50%;
+  margin-left: -60px;
 transition: all 0.3s ease 0.1s;
 }
 
