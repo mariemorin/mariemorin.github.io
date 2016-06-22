@@ -48,6 +48,7 @@
 
 .gdtitre.fixed{
 display: none;
+ transition: all 0.3s ease 0.1s;
 }
 
 .titre h2
@@ -161,7 +162,7 @@ width:90%;
  text-align: left;
  right: initial;
  top: initial;
- width:240px;
+ width:250px;
  margin-top:0px;
  margin: auto;
 }
