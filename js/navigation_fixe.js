@@ -2,7 +2,14 @@
 $(window).scroll(function (event) {
     var y = $(this).scrollTop();
 
-    if (y >= 50) {
+    if (y >= 50 &&  $(window).width() <= 400 ){
+      $(".gdtitre").addClass("fixed");
+      $('nav').addClass('fixed');
+      $('.ss-titre').addClass('fixed');
+      $('.nav1').addClass('fixed');
+    }
+
+    else if (y >= 50 &&  $(window).width() > 400) {
       $('nav').addClass('fixed');
       $('.ss-titre').addClass('fixed');
       $('.nav1').addClass('fixed');
@@ -12,6 +19,7 @@ $(window).scroll(function (event) {
       $('nav').removeClass('fixed');
       $('.ss-titre').removeClass('fixed');
       $('.nav1').removeClass('fixed');
+      $(".gdtitre").removeClass("fixed");
 
     }
   });
