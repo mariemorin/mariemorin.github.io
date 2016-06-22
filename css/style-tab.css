@@ -1,25 +1,32 @@
+/*************************************************
+  Version Tablette entre 970px et 640px
+*************************************************/
+
+/*******************  premier break point  ***********************/
+
 @media (max-width: 970px) {
 .txt-intro{
   width: 80%;
   }
 }
 
+/*******************  deuxième break point  ***********************/
+
 @media (max-width: 870px) {
   body {
         width: auto;
         margin: 0;
         padding: 0;
-
         -webkit-hyphens: auto; /* césure propre */
         -moz-hyphens: auto;
         hyphens: auto;
         word-wrap: break-word; /* passage à la ligne forcé */
     }
 
-
-  #nav:hover ul {
-	transition: 0s linear .05s;
-}
+/******************************
+        PAGE 1
+*******************************/
+/************** En-Tête ********************/
 
 .titre
 {position:relative;
@@ -34,11 +41,16 @@ font-family: "Montez-Regular", Arial, serif;
   margin-right: 20px;
 }
 
+/************** Navigation ********************/
 .nav1
 {position:absolute;
 bottom: 10%;
 text-align: left;
 width: auto;
+}
+
+#nav:hover ul {
+transition: 0s linear .05s;
 }
 
 li#menu-portfolio
@@ -64,9 +76,10 @@ text-align: center;
   padding-left: 100px;
 }
 
-  .intro{
-  height:440px;
-  }
+/************** Texte intro ********************/
+.intro{
+height:440px;
+}
 
 .txt-intro{
 width:50%;
@@ -88,33 +101,30 @@ text-align: justify;
   margin-top: 0px;
 }
 
+/************** ombre et logos ********************/
+.me{
+position:fixed;
+top: 187px;
+left:25%;
+z-index:1;
+margin-left: -109px
+}
 
-  .me{
-  position:fixed;
-  top: 187px;
-  left:25%;
-  z-index:1;
-  margin-left: -109px
-
-  }
-
-  .me.fixed{
-  position:absolute;
-  left:25%;
-  top: 795px;
-  margin-left: -109px;
-  }
+.me.fixed{
+position:absolute;
+left:25%;
+top: 795px;
+margin-left: -109px;
+}
 
 .icones-tt{
 position:relative;
 top:0px;
-  }
+}
 
-
-
-  /******************************
+/******************************
       PAGE 2
-  *******************************/
+*******************************/
 
 .fleche1, .fleche2, .fleche3, .fleche4{
   display: none;
@@ -124,6 +134,7 @@ top:0px;
   margin-left: 50%;
 }
 
+/************** Texte compétences ********************/
 .dev h2, .dev ul, .admin h2, .admin ul, .res h2, .res ul, .asso h2, .asso ul
 {position:initial;
  text-align: left;
@@ -136,6 +147,7 @@ top:0px;
 .dev h2, .admin h2, .res h2, .asso h2
 {margin-top:20px;
 }
+
 /******************************
             PAGE 3
 *******************************/
@@ -175,61 +187,69 @@ text-align: left;
   width: 100%;
   }
 
-  /******************************
+/******************************
               PAGE 5
-  *******************************/
-  #slide-page5
-  { height: 900px;
-  }
+*******************************/
+#slide-page5{
+height: 900px;
+}
 
+/************** image enveloppe derrière ********************/
 .contact img:first-child{
-  position:relative;
-  right:inherit;
-  bottom: -200px;
-  width: auto;
-  margin:auto;
+position:relative;
+right:inherit;
+bottom: -200px;
+width: auto;
+margin:auto;
 }
 
+/************** le formulaire ********************/
 .formulaire {
-  position:relative;
-  text-align: left;
-  bottom: 310px;
-  right: inherit;
-  margin:auto;
-  height: 460px;
-  width: 430px;
-  padding-left: 15px;
+position:relative;
+text-align: left;
+bottom: 310px;
+right: inherit;
+margin:auto;
+height: 460px;
+width: 430px;
+padding-left: 15px;
 }
 
+/************* image enveloppe devant ********************/
 .contact img:last-child{
-  position:relative;;
+position:relative;;
 bottom: 450px;
-  right:inherit;
+right:inherit;
 margin: auto;
 width: auto;
 }
 
+/************** logo réseaux sociaux ********************/
 .timbre{
 position: relative;
 text-align: center;
 height: inherit;
 bottom: 0px;
-  }
+}
 
 .cadre-logo{
-  display: inline-block;
+display: inline-block;
+}
 }
 
-}
+
+/******************* 3ème et 4ème break point  ***********************/
+
+/************** logos cachés ********************/
 
 @media (max-width: 800px) {
-  #terre, #outil {
-  visibility: hidden;
+#terre, #outil {
+visibility: hidden;
 }
 }
 
 @media (max-width: 720px) {
 #avion {
 visibility: hidden;
-  }
-  }
+}
+}

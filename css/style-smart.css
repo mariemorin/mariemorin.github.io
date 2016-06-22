@@ -1,45 +1,33 @@
+/*************************************************
+  Version Smartphone jusqu'a max-width :640px
+  4 break points : 640/575/400/320
+*************************************************/
+
+/*******************  1er break point  ***********************/
 @media (max-width: 640px) {
 
-  body {
-        width: auto;
-        margin: 0;
-        padding: 0;
-        -webkit-hyphens: auto; /* césure propre */
-        -moz-hyphens: auto;
-        hyphens: auto;
-        word-wrap: break-word; /* passage à la ligne forcé */
-    }
-
-    pre { white-space: pre-wrap; } /* pour firefox et les <pre> */
-
-    img,
-    table,
-        td,
-        blockquote,
-        code,
-        pre,
-        textarea,
-        input,
-        iframe,
-        object,
-        embed,
-        video {
-            max-width: 100%;
-        }
-
-        /* conserver le ratio des images */
-        img {
-            height: auto;
-        }
-
-#nav:hover ul {
-	transition: 0s linear .05s;
+body {
+width: auto;
+margin: 0;
+padding: 0;
+-webkit-hyphens: auto; /* césure propre */
+-moz-hyphens: auto;
+hyphens: auto;
+word-wrap: break-word; /* passage à la ligne forcé */
 }
 
-.nav1
-{bottom: 10%;
+pre { white-space: pre-wrap; } /* pour firefox et les <pre> */
+
+img, table, td, blockquote, code, pre, textarea, input, iframe, object, embed, video {
+max-width: 100%;
 }
 
+/* conserver le ratio des images */
+img {
+height: auto;
+}
+
+/************** En-Tête ********************/
 .titre, .titre h2
 {display: block;
   margin-right: 0;
@@ -53,6 +41,15 @@ display: none;
 
 .titre h2
 {margin-left: 15px;
+}
+
+/************** Navigation ********************/
+.nav1
+{bottom: 10%;
+}
+
+#nav:hover ul {
+	transition: 0s linear .05s;
 }
 
 li.toggleSubMenu {
@@ -94,50 +91,37 @@ li#menu-portfolio
 
 
 .subMenu{
-  background: rgb(59,184,187);
-  margin: 0;
-  padding: 0;
-  border-bottom: 1px solid #666;
-  border-radius:0 3px 3px 3px;
-  position: absolute;
-   top:30px;
-  left: 15px;
+background: rgb(59,184,187);
+margin: 0;
+padding: 0;
+border-bottom: 1px solid #666;
+border-radius:0 3px 3px 3px;
+position: absolute;
+top:30px;
+left: 15px;
 }
 
 
 .navigation ul.subMenu a {
-  background: none;
-  padding: 3px 0px;
+background: none;
+padding: 3px 0px;
 }
 
 .navigation ul.subMenu li:hover {
-    text-decoration: none;
-    background-image: url(../images/menu-onglet-on.png);
+text-decoration: none;
+background-image: url(../images/menu-onglet-on.png);
 }
 
 nav.fixed {
- height: 55px;
- transition: all 0.3s ease 0.1s;
- }
+height: 55px;
+transition: all 0.3s ease 0.1s;
+}
 
 .nav1.fixed
 {transition: all 0.3s ease 0.1s;
 }
 
-.me.debut{
-background: url(../images/brain-moi-small.png) no-repeat;
-position:inherit;
-width: 206px;
-height:240px;
-top:inherit;
-margin: auto;
-margin-top: 10px;
-}
-
-.icones-tt{
-  display: none;
-}
-
+/************** Texte intro ********************/
 .intro{
   height:580px;
 margin:auto;
@@ -150,9 +134,27 @@ width:90%;
 .txt-intro p{
   margin-top: 5px;
 }
+
+/************** ombre et logos ********************/
+.me.debut{
+background: url(../images/brain-moi-small.png) no-repeat;
+position:inherit;
+width: 206px;
+height:240px;
+top:inherit;
+margin: auto;
+margin-top: 10px;
+}
+
+.icones-tt{
+display: none;
+}
+
+
 /******************************
             PAGE 2
 *******************************/
+/************** Texte compétences ********************/
 .presentation{
   margin-left: 0%;
 }
@@ -170,6 +172,7 @@ width:90%;
 .dev h2, .admin h2, .res h2, .asso h2
 {margin-top:20px;
 }
+
 /******************************
             PAGE 3
 *******************************/
@@ -202,21 +205,21 @@ height: 1690px;
   text-align: left;
 }
 
-
 }
 
+/*******************  2ème break point  ***********************/
 @media (max-width: 575px) {
 
 /******************************
               PAGE 4
 *******************************/
-  .diplome{
-  display: none;
-  }
+.diplome{
+display: none;
+}
 
 .txt-formation p {
 margin: 0 15px 0 15px;
-  }
+}
 
 #slide-page4 ul{
 width: 90%;
@@ -245,25 +248,27 @@ height: 110px;
 /******************************
               PAGE 5
 *******************************/
-#slide-page5
-{height: 750px;
+#slide-page5 {
+height: 750px;
 }
 
-.letter-back, .letter-front{
-  display: none;
+.contact {
+position: relative;
+height: 550px;
+bottom: 0px;
 }
 
+/************** image enveloppe devant et derrière ********************/
+.letter-back, .letter-front {
+display: none;
+}
+
+/************** le formulaire ********************/
 .formulaire {
-  margin-top: 70px;
-  bottom: 0px;
-  background-image: url('../images/lettre-part2.png');
-  width: inherit;
-}
-
-.contact{
-  position: relative;
-  height: 550px;
-  bottom: 0px;
+margin-top: 70px;
+bottom: 0px;
+background-image: url('../images/lettre-part2.png');
+width: inherit;
 }
 
 .timbre{
@@ -272,11 +277,16 @@ margin-top: 20px;
 
 }
 
+/*******************  3ème break point  ***********************/
 @media (max-width: 400px) {
-.intro{
-height:680px;
+
+/************** En-Tête ********************/
+.titre h2{
+text-align: right;
+margin-right: 20px;
 }
 
+/************** Navigation ********************/
 li.toggleSubMenu {
 font-size: 1.3em;
 margin-left: 8px;
@@ -287,18 +297,19 @@ margin-left: 8px;
   left: 8px;
 }
 
-.titre h2{
-text-align: right;
-margin-right: 20px;
+/************** Texte intro ********************/
+.intro{
+height:680px;
 }
 
-
-
+/******************************
+            PAGE 4
+*******************************/
 #slide-page4{
 height: 670px;
 }
 
-
+/************** Logos formation ********************/
 .logo1 {
 margin-bottom: 25px;
 text-align: center;
@@ -320,7 +331,7 @@ margin-bottom: 25px;
 
 }
 
-
+/*******************  4ème break point  ***********************/
 @media (max-width: 320px) {
 #slide-page3{
 height: 1760px;
@@ -331,6 +342,8 @@ height: 830px;
 }
 
 }
+
+/*******************  Version Landscape  ***********************/
 
 @media (max-device-width:768px) and (orientation: landscape) {
   html {
