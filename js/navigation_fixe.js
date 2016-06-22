@@ -35,36 +35,6 @@ $(window).scroll(function (event) {
 
 
 
-// Effets de couleur sur le cerveau sur petit ecran
-$(window).scroll(function (event) {
-
-    var y = $(this).scrollTop();
-
-    if (y > 280 && y < 398 && $(window).width() < 870 ) {
-          $('.me').addClass('dev');
-          $('.me').removeClass('.debut');
-
-        } else if
-          (y >= 398 && y < 428 && $(window).width() < 870 ) {
-            $('.me').addClass('admin');
-
-          } else if
-            (y >= 428 && y < 508 && $(window).width() < 870 ) {
-              $('.me').addClass('res');
-
-             } else if
-              (y >= 508 && y < 578 && $(window).width() < 870 ) {
-                $('.me').addClass('asso');
-              }
-          else {
-          // sinon, on l'enlève
-          $('.me').removeClass('admin');
-          $('.me').removeClass('dev');
-          $('.me').removeClass('res');
-          $('.me').removeClass('asso');
-        }
-  });
-
 // enlever les fleches et effet push sur txt-intro sur petit écran
     $(document).ready( function() {
        /* Check width on page load*/
