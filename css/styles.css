@@ -613,6 +613,18 @@ text-align: justify;
   font-style: italic;
 }
 
+/************** Fixer Bug sur Page 1 entre width 871 et 884 ********************/
+@media (min-width: 871px) and (max-width: 884px) {
+.txt-intro {
+position:relative;
+top:-270px;
+}
+
+.icones-tt{
+  position:relative;
+  top:170px;
+}
+}
 
 /*********************************************
   Effet Shake sur icones au-dessus de la tête

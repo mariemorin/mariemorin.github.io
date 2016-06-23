@@ -1,8 +1,13 @@
-/*************************************************
+/*********************************************************************
   Version Tablette entre 970px et 640px
-*************************************************/
+  1er Break point: 970px
+  2ème Break point: 870px (main one)
+  3ème et 4ème Break points: 800px et 720px (logos cachés)
+  5ème Break point: 640 < x < 780px (barre de navigation décalée)
+  6ème Break point: 640 < x < 655 (Fixe bug page 1)
+*********************************************************************/
 
-/*******************  premier break point  ***********************/
+/*******************  1er break point  ***********************/
 
 @media (max-width: 970px) {
 .txt-intro{
@@ -10,7 +15,7 @@
   }
 }
 
-/*******************  deuxième break point  ***********************/
+/*******************  2ème break point  ***********************/
 
 @media (max-width: 870px) {
   body {
@@ -301,8 +306,7 @@ display: inline-block;
 
 
 /******************* 3ème et 4ème break point  ***********************/
-
-/************** logos cachés ********************/
+/******************* logos cachés ************************************/
 
 @media (max-width: 800px) {
 #avion, #terre {
@@ -313,5 +317,34 @@ visibility: hidden;
 @media (max-width: 720px) {
  #outil {
 visibility: hidden;
+}
+}
+
+/******************* 5ème break point  **********************************/
+/******************* Barre de navigation décalée  ***********************/
+@media (min-width: 641px) and (max-width: 780px) {
+.titre h1{
+font-size: 2.0em;
+margin-top: 1px;
+}
+
+.subMenu li:first-child {
+padding-left: 150px;
+}
+}
+
+/******************* 6ème break point  ********************************************************/
+/******************* Fixer le Bug sur la Page 1 entre width 641 et 654  ***********************/
+@media (min-width: 641px) and (max-width: 654px) {
+
+.txt-intro{
+position:relative;
+left:46%;
+}
+
+.icones-tt{
+position:relative;
+top:-350px;
+left: -170px;
 }
 }

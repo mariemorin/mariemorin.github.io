@@ -1,3 +1,7 @@
+<?php
+  session_start();
+  ?>
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
 <head>
@@ -221,7 +225,26 @@ L'école Manche Open School a été créée par 2 acteurs manchois:</p>
 
 <!--== -------------------  - Page5 ------------------------->
 <section class="slide-general txtcenter" id="slide-page5">
-  <div class="grid-3-small-1">
+
+  <?php if(array_key_exists('errors',$_SESSION)): ?>
+  <div class= "message_erreur_parent">
+  <div class= "message_erreur">
+  <?= implode('<br>', $_SESSION['errors']); ?>
+  </div>
+  </div>
+  <?php endif; ?>
+
+  <?php if(array_key_exists('success',$_SESSION)): ?>
+  <div class= "message_erreur_parent">
+  <div class= "message_erreur">
+  Votre message à bien été transmis.
+
+  </div>
+  </div>
+  <?php endif; ?>
+
+
+<div class="grid-3-small-1">
 
 <div class="contact grid-item-double">
 <img src="images/lettre-part1.png" alt="lettre" class="letter-back"/>
@@ -230,18 +253,22 @@ data-easing="easeinout">
 
 <h2 class="pbn txtcenter">Votre Message :</h2>
 <p class="pls ptn mtn mbs">N.B. : Tous les champs sont obligatoires.</p>
+<form method="post" action="formulaire.php">
   <label for="name" class="pls">Votre prénom et votre nom :</label><br />
-   <input type="texte" name="name"
-   maxlength="40"  id="name" class="mbs input-box" /><br />
+
+   <input required type="texte" name="name" maxlength="40"  id="name" class="mbs input-box"
+   value="<?php echo isset($_SESSION['inputs']['nom'])? $_SESSION['inputs']['nom'] : ''; ?>" /><br />
 
    <label for="email" class="pls">Votre email :</label><br />
-    <input type="email" name="email"
-    maxlength="40" id="email" class="mbs input-box" /><br />
+    <input required type="email" name="email" maxlength="40" id="email" class="mbs input-box"
+    value="<?php echo isset($_SESSION['inputs']['email'])? $_SESSION['inputs']['email'] : ''; ?>" /><br />
 
   <label for="comments" class="pls">Votre message :</label><br />
-   <textarea name="comments" id="comments" class="mtn mbm input-box">
+   <textarea required name="comments" id="comments" class="mtn mbm input-box">
+     <?php echo isset($_SESSION['inputs']['message'])? $_SESSION['inputs']['message'] : ''; ?>
    </textarea>
   <input type="submit" value="Envoyer" class="bouton mtm" />
+</form>
 </div>
 
 <img src="images/lettre-part3.png" alt="lettre" class="letter-front" />
@@ -271,7 +298,7 @@ data-easing="easeinout">
   </div>
 
 </div>
-<a href="mention.html" class="mention">- Mentions Légales -</a>
+<a href="mention.php" class="mention">- Mentions Légales -</a>
 
 </section>
 

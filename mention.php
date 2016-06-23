@@ -27,10 +27,10 @@
        <li class="toggleSubMenu">
          <span>Menu</span>
           <ul class="subMenu">
-      <li><a href="index.html#slide-page1" title="Aller à ma page de présentation">Présentation</a></li>
-      <li id="menu-portfolio"><a href="index.html#slide-page3" title="Aller à mon portfolio">Porfolio</a></li>
-      <li><a href="index.html#slide-page4" title="Aller à ma page formation">Formation</a></li>
-      <li><a href="index.html#slide-page5" title="Aller à la page contact">Contact</a></li>
+      <li><a href="index.php#slide-page1" title="Aller à ma page de présentation">Présentation</a></li>
+      <li id="menu-portfolio"><a href="index.php#slide-page3" title="Aller à mon portfolio">Porfolio</a></li>
+      <li><a href="index.php#slide-page4" title="Aller à ma page formation">Formation</a></li>
+      <li><a href="index.php#slide-page5" title="Aller à la page contact">Contact</a></li>
           </ul>
         </li>
     </ul>

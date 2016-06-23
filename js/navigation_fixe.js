@@ -1,5 +1,6 @@
 $(document).ready( function() {
-        // BARRE DE NAVIGATION
+
+// BARRE DE NAVIGATION
 $(window).scroll(function (event) {
     var y = $(this).scrollTop();
 
