@@ -1,4 +1,5 @@
-// BARRE DE NAVIGATION
+$(document).ready( function() {
+        // BARRE DE NAVIGATION
 $(window).scroll(function (event) {
     var y = $(this).scrollTop();
 
@@ -39,21 +40,18 @@ $(window).scroll(function (event) {
         else {
         $('.me').removeClass('fixed');
       }
-    });
+});
 
 
-
-// enlever les fleches et effet push sur txt-intro sur petit écran
-    $(document).ready( function() {
-       /* Check width on page load*/
+// Effet push sur txt-intro sur petit écran
+    /* Check width on page load*/
        if ( $(window).width() < 870) {
         $('.txt-intro').addClass('grid-item-last');
        }
        else {}
-    });
 
+    /*If browser resized, check width again */
     $(window).resize(function() {
-       /*If browser resized, check width again */
        if ($(window).width() < 870) {
         $('.txt-intro').addClass('grid-item-last');
        }
@@ -62,17 +60,13 @@ $(window).scroll(function (event) {
 
 
 // Elargir l'intro sur Smartphone
-        $(document).ready( function() {
-           /* Check width on page load*/
            if ( $(window).width() < 640) {
             $('.txt-intro').removeClass('grid-item-last');
             $('.intro').removeClass('grid-small-2');
            }
            else {}
-        });
 
         $(window).resize(function() {
-           /*If browser resized, check width again */
            if ($(window).width() < 640) {
             $('.txt-intro').removeClass('grid-item-last');
             $('.intro').removeClass('grid-small-2');
@@ -83,16 +77,15 @@ $(window).scroll(function (event) {
         });
 
 
-
 // enlever l'effet scrollme sur petit écran et lorsque l'écran est resized
-        $(document).ready( function() {
+
            /* Check width on page load*/
            if ( $(window).width() < 870) {
             $('.page2').removeClass('scrollme');
             $('.formulaire').removeClass('scrollme');
            }
            else {}
-        });
+
 
         $(window).resize(function() {
            /*If browser resized, check width again */
@@ -104,3 +97,7 @@ $(window).scroll(function (event) {
                  $('.formulaire').addClass('scrollme');
                 }
         });
+  });
+
+// Lancer l'effet Shake sur les icones au-dessus de la tete
+$('.ShakeAndBorder').ShakeBorder();

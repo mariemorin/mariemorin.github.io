@@ -122,6 +122,68 @@ position:relative;
 top:0px;
 }
 
+#nuage{
+top:5px;
+left:0px;
+}
+
+#ampoule{
+top:-25px;
+left:0px;
+}
+
+#www{
+top:-40px;
+left:20px;
+}
+
+#reseau{
+top:-20px;
+left:30px;
+}
+
+#outil{
+top:20px;
+left:30px;
+}
+
+#ordi{
+top:0px;
+left:50px;
+}
+
+#valise{
+top:-45px;
+left:50px;
+}
+
+#molecule{
+top:-60px;
+left:65px;
+}
+
+#ordi2{
+top:-45px;
+left:82px;
+}
+
+#erlen{
+top:-5px;
+left:69px;
+}
+
+#avion{
+top:40px;
+left:42px;
+}
+
+#terre{
+top:75px;
+left:5px;
+}
+
+
+
 /******************************
       PAGE 2
 *******************************/
@@ -243,13 +305,13 @@ display: inline-block;
 /************** logos cachés ********************/
 
 @media (max-width: 800px) {
-#terre, #outil {
+#avion, #terre {
 visibility: hidden;
 }
 }
 
 @media (max-width: 720px) {
-#avion {
+ #outil {
 visibility: hidden;
 }
 }
